@@ -9,19 +9,27 @@ const createJestConfig = nextJest({
 const config = {
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
- 
+  collectCoverage: true,
+  coverageProvider: 'v8',
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.stories.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!<rootDir>/out/**',
+    '!<rootDir>/.next/**',
+    '!<rootDir>/*.config.js',
+    '!<rootDir>/coverage/**',
+  ],
+  // forceCoverageMatch: ['**/*.{js,jsx,ts,tsx}'],
   testEnvironment: 'jest-environment-jsdom',
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'ts-jest',
   },
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
-  rootDir: 'tests', 
+  rootDir: './', 
+  roots: ["<rootDir>/src/", "<rootDir>/tests/"],
   coverageDirectory: '../coverage',
 }
 
