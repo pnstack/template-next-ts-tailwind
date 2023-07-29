@@ -15,3 +15,4 @@ export const createLayout = (Layout: React.FC<PropsWithChildren>) => {
     return <Layout>{Page}</Layout>;
   };
 };
+
