@@ -9,6 +9,9 @@
     "lint": "next lint",
     "lint:fix": "eslint --fix src",
     "test": "jest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:codegen": "playwright codegen",
     "prettier": "prettier --write src",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -27,6 +30,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.36.2",
     "@storybook/addon-essentials": "7.1.1",
     "@storybook/addon-interactions": "7.1.1",
     "@storybook/addon-links": "7.1.1",
