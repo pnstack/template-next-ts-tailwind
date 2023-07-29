@@ -1,8 +1,9 @@
-import { ThemeMode } from '@/common/constants';
-import { AppContext } from '@/contexts/AppContext';
 import React, { useContext } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+
+import { ThemeMode } from '@/common/constants';
+import { AppContext } from '@/contexts/AppContext';
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(AppContext);

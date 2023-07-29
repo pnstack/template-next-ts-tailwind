@@ -10,7 +10,8 @@ import { PropsWithChildren, ReactElement } from 'react';
  * component.
  */
 export const createLayout = (Layout: React.FC<PropsWithChildren>) => {
-  return (Page: ReactElement) => {
+  // eslint-disable-next-line react/display-name
+  return function (Page: ReactElement) {
     return <Layout>{Page}</Layout>;
   };
 };

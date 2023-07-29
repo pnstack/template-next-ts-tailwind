@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { NextPageWithLayout } from '@/types';
+
 import { getAppLayout } from '@/components/layouts/AppLayout';
+import { NextPageWithLayout } from '@/types';
 
 const Home: NextPageWithLayout = () => {
   return (

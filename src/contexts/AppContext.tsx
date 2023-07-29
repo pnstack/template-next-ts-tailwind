@@ -1,5 +1,6 @@
+import { createContext, PropsWithChildren, useEffect, useState } from 'react';
+
 import { ThemeMode } from '@/common/constants';
-import { PropsWithChildren, createContext, useEffect, useState } from 'react';
 
 export interface IAppContext {
   theme: string;
@@ -19,7 +20,7 @@ const AppContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
-  
+
   useEffect(() => {
     const localTheme: string = localStorage.getItem('theme') ?? ThemeMode.LIGHT;
     if (localTheme) {

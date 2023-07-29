@@ -1,7 +1,9 @@
-import AppContextProvider from '@/contexts/AppContext';
-import '@/styles/globals.scss';
-import { AppPropsWithLayout } from '@/types';
 import { ReactElement } from 'react';
+
+import AppContextProvider from '@/contexts/AppContext';
+import { AppPropsWithLayout } from '@/types';
+
+import '@/styles/globals.scss';
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
