@@ -1,0 +1,30 @@
+name: Run Tests and Coverage Report
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Change this to match your Node.js version
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests and generate coverage report
+        run: pnpm run test:cov
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

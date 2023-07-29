@@ -16,15 +16,13 @@ const config = {
     '^.+\\.(js|jsx|ts|tsx)$': 'ts-jest',
   },
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-
-  // rootDir: 'tests',
-  // moduleFileExtensions: ['js', 'json', 'ts'],
-  // testRegex: '.*\\.spec\\.ts$',
-  // transform: {
-  //   '^.+\\.(t|j)s$': 'ts-jest',
-  // },
-  // collectCoverageFrom: ['**/*.(t|j)s'],
-  // coverageDirectory: '../coverage',
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+  ],
+  rootDir: 'tests', 
+  coverageDirectory: '../coverage',
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
