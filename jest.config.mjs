@@ -30,7 +30,7 @@ const config = {
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   rootDir: './', 
   roots: ["<rootDir>/src/", "<rootDir>/tests/"],
-  coverageDirectory: '../coverage',
+  coverageDirectory: './coverage',
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
