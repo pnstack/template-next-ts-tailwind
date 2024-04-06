@@ -24,9 +24,9 @@
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "eslint-config-next": "13.2.4",
+    "eslint-config-next": "14.1.4",
     "framer-motion": "^10.18.0",
-    "next": "13.2.4",
+    "next": "14.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
@@ -35,7 +35,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.42.1",
+    "@playwright/test": "^1.43.0",
     "@storybook/addon-essentials": "7.1.1",
     "@storybook/addon-interactions": "7.1.1",
     "@storybook/addon-links": "7.1.1",
@@ -62,9 +62,9 @@
     "postcss": "^8.4.38",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "sass": "^1.72.0",
+    "sass": "^1.74.1",
     "storybook": "7.1.1",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "ts-jest": "^29.1.2"
   }
 }
