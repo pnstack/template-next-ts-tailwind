@@ -4,12 +4,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['react-icons'],
   },
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: {
-        and: [/\.(js|ts)x?$/],
-      },
       use: ['@svgr/webpack'],
     });
 
