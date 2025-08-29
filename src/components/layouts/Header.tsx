@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';

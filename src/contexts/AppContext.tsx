@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, PropsWithChildren, useEffect, useState } from 'react';
 
 import { ThemeMode } from '@/common/constants';
